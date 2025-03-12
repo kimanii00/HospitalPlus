@@ -18,7 +18,7 @@
        <p><b>Doctor :</b> {{ x.doctor }}</p>
        <p><b>Message :</b> {{ x.message }}</p>
        <p>
-           <a href="" class="text-warning me-5">
+           <a href="{% url 'edit' x.id %}" class="text-warning me-5">
                <i class="bi bi-pencil"></i>
            </a>
 
@@ -26,6 +26,11 @@
            <a href="/delete/{{ x.id }}" class="text-danger">
                <i class="bi bi-trash"></i>Delete
            </a>
+
+            <a href="{% url 'pay' %}" class="text-success">
+                    <i class="bi bi-credit-card"></i>Pay
+                </a>
+
 
        </p>
 
